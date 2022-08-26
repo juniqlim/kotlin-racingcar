@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test
 class CarTest {
     @Test
     fun test() {
-        assertThat(Car("j").name).isEqualTo("j")
+        val car = Car("j")
+        assertThat(car.name).isEqualTo("j")
+        assertThat(car.position).isEqualTo(0)
     }
 }
