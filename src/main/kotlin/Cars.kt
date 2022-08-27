@@ -2,6 +2,7 @@ interface Cars {
     fun cars(): List<Car>
     fun move()
     fun show()
+    fun winners(): List<Car>
 
     class Smart {
         fun toCars(carNames: String, number: Number = Number.ZeroToNineNumber()): Cars {
@@ -21,6 +22,11 @@ interface Cars {
 
         override fun show() {
             cars.forEach { it.show() }
+        }
+
+        override fun winners(): List<Car> {
+            val maxPosition = cars.maxOf { it.position }
+            return cars.filter { it.position == maxPosition }
         }
     }
 }
