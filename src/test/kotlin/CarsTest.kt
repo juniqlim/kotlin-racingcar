@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test
 class CarsTest {
     @Test
     fun createByList() {
-        assertThat(Cars.ListCars(listOf(Car("j", ZeroToNineNumber()), Car("k", ZeroToNineNumber()))).cars().size).isEqualTo(2)
+        assertThat(Cars.ListCars(listOf(Car("j", Number.ZeroToNineNumber()), Car("k", Number.ZeroToNineNumber()))).cars().size).isEqualTo(2)
     }
 
     @Test

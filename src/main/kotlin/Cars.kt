@@ -18,7 +18,7 @@ interface Cars {
 
         private fun create() {
             cars = carNames.split(",")
-                .map { Car(it, ZeroToNineNumber()) }
+                .map { Car(it, Number.ZeroToNineNumber()) }
         }
     }
 }
