@@ -3,7 +3,12 @@ import org.junit.jupiter.api.Test
 
 class CarsTest {
     @Test
-    fun test() {
-        assertThat(Cars(arrayListOf(Car("j", ZeroToNineNumber()), Car("k", ZeroToNineNumber()))).cars.size).isEqualTo(2)
+    fun createByList() {
+        assertThat(Cars.ListCars(listOf(Car("j", ZeroToNineNumber()), Car("k", ZeroToNineNumber()))).cars().size).isEqualTo(2)
+    }
+
+    @Test
+    fun createByString() {
+        assertThat(Cars.StringCars("j,k,l").cars().size).isEqualTo(3)
     }
 }
