@@ -1,4 +1,6 @@
-class Car(val name: String, val number: Number) {
+import Number.ZeroToNineNumber
+
+class Car(val name: String, val number: Number = ZeroToNineNumber()) {
     var position: Int = 0
 
     fun move() {

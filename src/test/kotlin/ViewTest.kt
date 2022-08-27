@@ -1,4 +1,3 @@
-import Number.ZeroToNineNumber
 import org.junit.jupiter.api.Test
 
 class ViewTest {
@@ -9,6 +8,6 @@ class ViewTest {
 
     @Test
     fun showWinner() {
-        View.ConsoleView.showWinner(listOf(Car("j", ZeroToNineNumber()), Car("k", ZeroToNineNumber())))
+        View.ConsoleView.showWinner(listOf(Car("j"), Car("k")))
     }
 }
