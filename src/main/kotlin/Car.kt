@@ -6,4 +6,8 @@ class Car(val name: String, val number: Number) {
             position += 1
         }
     }
+
+    fun show() {
+        View.ConsoleView.show(name, position)
+    }
 }

@@ -1,6 +1,7 @@
 interface Cars {
     fun cars(): List<Car>
     fun move()
+    fun show()
 
     class ListCars(val cars: List<Car>) : Cars {
         override fun cars(): List<Car> {
@@ -9,6 +10,10 @@ interface Cars {
 
         override fun move() {
             cars.forEach { it.move() }
+        }
+
+        override fun show() {
+            cars.forEach { it.show() }
         }
     }
 
@@ -23,6 +28,12 @@ interface Cars {
         override fun move() {
             create()
             cars.forEach { it.move() }
+        }
+
+        override fun show() {
+            create()
+            cars.forEach { it.show() }
+            println()
         }
 
         private fun create() {
