@@ -8,6 +8,6 @@ class Car(val name: String, val number: Number) {
     }
 
     fun show() {
-        View.ConsoleView.show(name, position)
+        View.ConsoleView.showRacing(name, position)
     }
 }

@@ -1,8 +1,8 @@
 interface View {
-    fun show(carName: String, position: Int)
+    fun showRacing(carName: String, position: Int)
 
     object ConsoleView : View {
-        override fun show(carName: String, position: Int) {
+        override fun showRacing(carName: String, position: Int) {
             println("$carName : ${graph(position)}")
         }
 
