@@ -9,6 +9,12 @@ interface Number {
         }
     }
 
+    class NineNumber : Number {
+        override fun value(): Int {
+            return 9
+        }
+    }
+
     class ZeroToNineNumber: Number {
         override fun value(): Int {
             return Random.nextInt(10)
