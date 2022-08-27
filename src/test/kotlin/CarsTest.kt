@@ -9,7 +9,7 @@ class CarsTest {
 
     @Test
     fun createByString() {
-        assertThat(Cars.StringCars("j,k,l").cars().size).isEqualTo(3)
+        assertThat(Cars.Smart().toCars("j,k,l").cars().size).isEqualTo(3)
     }
 
     @Test
@@ -22,7 +22,7 @@ class CarsTest {
 
     @Test
     fun moveStringCars() {
-        val cars = Cars.StringCars("j,k,l", Number.NineNumber())
+        val cars = Cars.Smart().toCars("j,k,l", Number.NineNumber())
         cars.move()
         assertThat(cars.cars().get(0).position).isEqualTo(1)
         assertThat(cars.cars().get(1).position).isEqualTo(1)
